@@ -1,0 +1,46 @@
+/* Style for the publication heading */
+#pubs-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the heading */
+  }
+  
+  /* Style for the thumbnail image */
+  #pubs-thumbnail {
+    text-align: center;
+    margin: 20px auto; /* Center the image horizontally and add space around it */
+  }
+  
+  /* Style for the image caption */
+  #pubs-thumbnail figcaption {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px; /* Add space above the caption */
+  }
+  
+  /* Style for the content block */
+  .pubs-block {
+    padding: 12px;
+    margin: 0 auto 20px; /* Center the content horizontally and add space below it */
+    max-width: 1000px; /* Set the maximum width to control content width */
+  }
+  
+  /* Style for the section headers */
+  .pubs-section {
+    font-size: 22px;
+  }
+  
+  /* Style for the content text */
+  .pubs-text {
+    font-size: 14px;
+    line-height: 1.5; /* Increase line height for better readability */
+    font-family: 'Roboto', 'Lato', Verdana, Helvetica, sans-serif;
+    text-align: justify;
+  }
+  
+  /* Style for the divider */
+  .divider {
+    border-top: 1px solid #ccc; /* Add a horizontal line divider */
+    margin: 20px 0; /* Add space above and below the divider */
+  }
+  

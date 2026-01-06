@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+    <script src="assets/js/simplejs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/youtube.js"></script>
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <title>Do Van Minh</title>
+  </head>
+  
+  <body class="body">
+    <nav class="navigation block">
+        <ul>
+            <li>
+                <a href="/" style="font-size:16px"> Home</a>
+            </li>
+            <li>
+                <a href="/#projects" style="font-size:16px"> Projects</a>
+            </li>
+            <li>
+                <a href="/blog.html" style="font-size:16px"> Tech Blog</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="divider"></div>
+    <div class="introduction block" style="display:flex">
+        <div class="" style="width:30%;float:left;">
+            <img src="assets/images/profile2.jpg" 
+            style="width:190px;height:190px;border-radius:50%;display: table-cell; margin:auto;position: relative;
+            top: 50%; transform: translateY(-50%);">
+        </div>
+
+        <div class="" style="width:70%;float:left">
+            <p class="name block" align="center">Do Van Minh </p>
+            <p class="block">
+                I am a Research Associate at 
+                <a href="https://www.ntu.edu.sg/" target="_blank">Nanyang Technological University (NTU), Singapore</a>, 
+                working in computer vision and deep learning for embedded computing platforms. I obtained Master by Engineering in Computer Science from 
+                 <a href="https://www.ntu.edu.sg/computing" target="_blank">NTU, College of Computing and Data Science</a>.
+                I worked with 
+                <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank"> Professor Lam Siew Kei</a> 
+                for multi-camera tracking in smart urban mobility in my dissertation.
+            </p>
+            <p class="block">
+                <a href="mailto:dovanminh1000@gmail.com">Email</a>
+                <span>&sol;</span>
+                <a href="assets/pdf/CV_Minh.pdf" target="_blank">CV</a> 
+                <span>&sol;</span> 
+                <a href="https://www.linkedin.com/in/minhdov/" target="_blank">Linkedin</a>
+                <!-- <span>&sol;</span> 
+                <a href="https://github.com/minhdov" target="_blank">Github</a> -->
+            </p>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="research block">
+        <p class="heading block"> Research</p>
+        <p class="block">My research is centered on developing lightweight Computer Vision and Deep Learning algorithms tailored for 
+            resource-constrained embedded platforms, with a particular focus on enhancing Intelligent Transportation 
+            Systems in Smart Cities. This involves creating solutions that are not only innovative 
+            but also practical for real-world applications.
+        </p>
+        <p class="block">
+            In this realm, I have honed my skills across various technical frameworks, including OpenCV, PyTorch, TensorFlow, ONNX, NCNN and ROS. 
+            My expertise covers a wide range of areas from data preparation and model optimization techniques like quantization and pruning, 
+            to diverse learning methodologies such as transfer learning, knowledge distillation, and a mix of supervised, self-supervised, 
+            and unsupervised techniques. My practical experience is evidenced by my success in complex tasks like change detection, 
+            image classification, object detection, segmentation, and multiple object tracking, with a special emphasis on deploying 
+            these advanced models on embedded devices.
+
+            <p class="block">
+            <strong>If you are interested in Computer Vision, Deep Learning, and Embedded Systems, feel free to <a href="mailto:dovanminh1000@gmail.com">contact me</a> for mentorship in these areas.</strong>
+            </p>
+
+        </p>
+    </div>
+
+    <div class="divider"></div>
+    <div class="workexp block" id="workexp">
+        <p class="heading block">Work Experience</p>
+        <div class="research-proj block">
+            <div class="research-summary">
+                <a href="https://tum-asia.edu.sg/prospects-after-graduation/pudo-future-mobility-in-singapore/" class="pub-name" target="_blank">Autonomous Drone in Maze </a>
+
+                <p class="pub-timeline" style="font-style:italic; padding:5px 0px 5px 0px;">
+                    College of Computing and Data Science, NTU, Nov. 2023 - Dec.2024
+                </p>
+
+                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+                    In the Autonomous Drone in Maze project, I built autonomous drone system focused on real-time sensing, mapping, planning, and navigation 
+  within a maze environment. My work involved creating a seamless simulation environment through the integration of Hardware-in-the-loop (HIL) pipelines 
+  and the implementation of real-time algorithms. This setup allowed drone flight simulation on a workstation while running SLAM, mapping, planning, 
+  navigation, and control modules in real-time on the Jetson.
+
+I optimized and allocated computing resources across the embedded CPU-DLA-GPU, which enhanced the performance of SLAM, 
+mapping, planning, navigation, and object detection. These efforts enabled the drone to achieve efficient flight speeds 
+and navigate through dense obstacle environments, showcasing the system's capability to operate effectively in challenging conditions on the Jetson.
+                </p>
+            </div>
+            
+        </div>
+        <div class="research-proj block">
+            <div class="research-summary">
+                <a href="https://tum-asia.edu.sg/prospects-after-graduation/pudo-future-mobility-in-singapore/" class="pub-name" target="_blank">Infrastructure to Vehicle (I2V) Communication for Driving Assistance </a>
+
+                <p class="pub-timeline" style="font-style:italic; padding:5px 0px 5px 0px;">
+                    School of Computer Science and Engineering, NTU, Nov. 2021 - Nov. 2023
+                </p>
+
+                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+                    In the Infrastructure to Vehicle (I2V) Communication for Driving Assistance project, I led the development of real-time, 
+  resource-efficient computer vision algorithms to facilitate urban traffic management through embedded systems, optimizing for both 
+  cost and power consumption. Leveraging object detection and tracking techniques, I spearheaded the analysis of traffic flows across 
+  19 camera feeds, significantly contributing to smarter city infrastructure.
+
+My role also encompassed the design and refinement of a lightweight AI model capable of vehicle tracking and crowd counting. 
+This innovation empowered four Odroid N2+ edge devices to simultaneously process live feeds from nine cameras and establish 
+seamless communication with Autonomous Vehicles. Furthermore, I guided and mentored a team of 15 student assistants in the nuances 
+of AI data handling, including meticulous preparation and annotation.
+                </p>
+            </div>
+            
+        </div>
+        <div class="research-proj block">
+            <div class="research-summary">
+                <a href="https://www.tum-create.edu.sg/research/sensing-and-management-agile-transport" class="pub-name" target="_blank">Sensing and Management for Agile Transport </a>
+
+                <p class="pub-timeline" style="font-style:italic; padding:5px 0px 5px 0px;">
+                    School of Computer Science and Engineering, NTU, Nov. 2016 - Nov. 2021
+                </p>
+
+                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+                    In the Sensing and Management for Agile Transport project, I played a pivotal role in setting up a comprehensive camera network, 
+  configuring 27 cameras across 8 key locations to capture high-quality video data for traffic analytics. My work involved developing 
+  and refining lightweight computer vision algorithms, training, and optimizing AI models on embedded platforms for real-time 
+  applications such as traffic density estimation, illegal parking and entry detection, crowd counting, and implementing vision-based 
+  smart traffic light systems.
+
+I also led the supervision of algorithmic enhancements and conducted extensive field testing on various embedded platforms 
+including Odroid XU4 and Odroid N2+, significantly contributing to traffic management advancements both at NTU and across Singapore.
+                </p>
+            </div>
+            
+        </div>
+        <div class="research-proj block">
+            <div class="research-summary">
+                <a href="https://ieeexplore.ieee.org/document/9928030" class="pub-name" target="_blank">Simultaneous Localization and Mapping (SLAM) </a>
+
+                <p class="pub-timeline" style="font-style:italic; padding:5px 0px 5px 0px;">
+                    School of Computer Science and Engineering, NTU, Aug 2020 - Dec 2022
+                </p>
+
+                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+                    In my work on Simultaneous Localization and Mapping (SLAM), I enhanced the robustness of visual SLAM 
+  by advancing dynamic outlier removal techniques within RGB-D and stereo data, which significantly improved pose 
+  estimation and map precision. I also progressed loop closure detection for long-term SLAM by integrating location semantics, 
+  reducing false matches and efficiently deploying these improvements on embedded systems..
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="project block" id="projects">
+        <p class="heading block">Projects</p>
+        <div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <span class="pub-name" style="color:black;">Autonomous Drone in Maze </span>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Nov 2023 - present
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://dblp.org/pid/250/0546.html" target="_blank">
+                Zhang Dongshuo
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            This project aims to develop a comprehensive autonomous drone system capable of real-time sensing, mapping, planning, and navigation within a maze to avoid obstacles and detect individuals. The integrated system will operate in real-time on an embedded computing platform, enabling the drone to fly at high speeds.
+
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <span class="pub-name" style="color:black;">Shoplifting Behavior Detection </span>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, May 2023 - present
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://dblp.org/pid/119/4173.html" target="_blank">
+                Wu Meiqing
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            This project focuses on leveraging computer vision and deep learning technologies to detect shoplifting behaviors in retail environments in real-time. 
+  By analyzing video streams, the system distinguishes between typical customer actions and potential theft activities. Embedded systems facilitate swift processing and response, allowing for immediate alerts or preventive measures. The objective is to minimize retail losses by implementing an advanced, automated surveillance solution.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <a href="https://tum-asia.edu.sg/prospects-after-graduation/pudo-future-mobility-in-singapore/" class="pub-name" style="display:inline" target="_blank">Infrastructure to Vehicle (I2V) Communication for Driving Assistance </a>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Nov 2021 - Nov 2023
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://dblp.org/pid/119/4173.html" target="_blank">
+                Wu Meiqing
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            This project aims to study the viability of I2V communication for driving assistance in public transportation facilities. In particular, visual analytics performed on the edge computing devices mounted on the public transportation infrastructure will be communicated to vehicles (such as Autonomous Vehicles) to enhance their navigation in the vicinity.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <span class="pub-name" style="color:black;">Vision based Smart Traffic Light </span>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Nov. 2021
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            The Smart Traffic Light field trial is geared towards reducing the waiting time of vehicles at traffic light stops. 
+  Executed at the company site of our industry collaborator, the project has achieved success in developing a lightweight 
+  computer vision algorithm and an optimized deep learning model for real-time vehicle detection and tracking. The system 
+  operates continuously on resource-constrained embedded computing platforms, ensuring 24/7 effectiveness. Notably, it maintains 
+  its efficiency amidst changing illumination and diverse weather conditions in Singapore.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <a href="https://www.tum-create.edu.sg/research/sensing-and-management-agile-transport" class="pub-name" style="display:inline" target="_blank">Virtual Right of Way </a>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Nov. 2020
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="teammates/nirmala-ramakrishnan.html" target="_blank">
+                Nirmala Ramakrishnan
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            The project has successfully developed a lightweight computer vision algorithm and an optimized deep learning model 
+  tailored for real-time operations on a low-cost embedded computing platform. These advancements ensure dependable, real-time 
+  performance on computing platforms with constrained resources, leading to efficient power conservation. The technology excels 
+  in detecting and tracking various bus types across diverse conditions, encompassing different weather patterns, illumination 
+  fluctuations, and assorted traffic scenarios in Singapore.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <span class="pub-name" style="color:black;">Vision based Crowd Counting </span>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Sept. 2019
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://dblp.org/pid/119/4173.html" target="_blank">
+                Wu Meiqing
+            </a>, 
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            This project is dedicated to accurately counting individuals waiting at bus stops, aiming to estimate 
+  bus demand and enhance the efficiency of the bus schedule system. Achieving this goal involves the development 
+  of a lightweight computer vision system and an optimized deep learning model. These innovations enable real-time 
+  and resilient performance on resource-constrained embedded computing platforms. Notably, the project achieves significant 
+  reductions in power consumption, facilitating continuous operation 24/7. This capability ensures precise people counting 
+  even amidst fluctuations in illumination and varying degrees of crowded scenarios in Singapore.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <a href="https://www.tum-create.edu.sg/research/sensing-and-management-agile-transport" class="pub-name" style="display:inline" target="_blank">Vision based Illegal Parking Detection </a>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Sept. 2018
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://www.linkedin.com/in/kratika-garg/?originalSubdomain=sg" target="_blank">
+                Kratika Garg
+            </a>, 
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            The primary objective of this project is to identify instances of illegal vehicle parking in 
+prohibited areas. To achieve this goal, the project has implemented a lightweight computer vision 
+system and an optimized deep learning model. These innovations enable real-time detection, tracking, and evidence 
+collection for illegal parking on resource-constrained embedded computing platforms. Operating 24/7, the system is 
+resilient to changes in illumination and varying weather conditions in Singapore.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <a href="https://www.tum-create.edu.sg/research/sensing-and-management-agile-transport" class="pub-name" style="display:inline" target="_blank">Vision based Illegal Entry Detection </a>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Oct. 2017
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://dblp.org/pid/119/4173.html" target="_blank">
+                Wu Meiqing
+            </a>, 
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            This project is designed to identify instances of illegal vehicle entry into the bus lane during prohibited durations. 
+  To achieve this, the project has developed a lightweight computer vision system and an optimized deep learning model. 
+  These technological advancements enable real-time detection, tracking, and evidence collection for non-bus unauthorized entries. 
+  The system operates continuously on resource-constrained embedded computing platforms, ensuring 24/7 functionality even in the 
+  presence of changing illumination and various weather conditions in Singapore.
+        </p>
+    </div>
+</div>
+<div class="research-proj block">
+    <div class="research-summary">
+        <div style="overflow:hidden">
+            <div style="max-width: 50%; float:left;">
+                <a href="https://www.tum-create.edu.sg/research/sensing-and-management-agile-transport" class="pub-name" style="display:inline" target="_blank">Vision based Traffic Density Estimation </a>
+            </div>
+            <div style="max-width: 50%; float:right;">
+                NTU, Singapore, Nov. 2016
+            </div>
+        </div>
+
+        <p class="pub-teammates" style="font-style:italic; padding:5px 0px 5px 0px;">
+            Teammates:
+            <a href="https://www.linkedin.com/in/kratika-garg/?originalSubdomain=sg" target="_blank">
+                Kratika Garg
+            </a>, 
+            <a href="teammates/nirmala-ramakrishnan.html" target="_blank">
+                Nirmala Ramakrishnan
+            </a>, 
+            <a href="https://binhphan.github.io/" target="_blank">
+                <strong>Van Minh Do</strong>
+            </a>, 
+            <a href="https://www.linkedin.com/in/alokprakash2/" target="_blank">
+                Alok Prakash
+            </a>, 
+            <a href="https://siewkeilam.github.io/ei-research-group/index.html" target="_blank">
+                Siew-Kei Lam
+            </a>, 
+            <a href="https://www.ntu.edu.sg/scse/about-us/past-chairs/prof-thambipillai-srikanthan" target="_blank">
+                Thambipillai Srikanthan
+            </a>
+        </p>
+
+        <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+            
+The primary goal of this project is to estimate traffic density across different lanes on the road. 
+To achieve this, the project has developed a lightweight computer vision algorithm specifically 
+designed to detect the percentage of lane occupancy. This algorithm operates seamlessly on resource-constrained 
+embedded computing platforms, ensuring continuous functionality 24/7. It is adept at handling changes in illumination 
+and various weather conditions, providing reliable traffic density estimates on roads in Singapore.
+        </p>
+    </div>
+</div>
+    </div>
+    
+    <!-- <div class="divider"></div>
+    <div class="publication block" id="publications">
+        <p class="heading block">Publications</p>
+        {% include publications.html %}
+    </div> -->
+
+    <!-- <div class="divider"></div>
+    <div class="publication block" id="list100">
+        <a href="list100.html" target="_blank">
+            <p class="heading block">List100</p>
+        </a>
+    </div> -->
+    
+
+    <div>
+
+    <div class="block">
+        <p class="block" style="float:right">Theme from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.</p>
+    </div>
+    
+  </body>
+</html>

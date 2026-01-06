@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pubs_webpage.css">
+
+    <script src="../assets/js/simplejs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/youtube.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex: { equationNumbers: { autoNumber: "AMS" } }
+      });
+      </script>
+      
+    <link rel="icon" href="../assets/images/publications/jon21/smu.png">
+
+    <title>GRAND-VISION: An Intelligent System for Optimized Deployment Scheduling of Law Enforcement Agents</title>
+  </head>
+  
+  <body class="body">
+        <h1 id="pubs-heading">GRAND-VISION: An Intelligent System for Optimized Deployment Scheduling of Law Enforcement Agents</h1>
+
+        <figure id="pubs-thumbnail">
+            <img src="../assets/images/publications/jon21/thumbnail.png">
+            <figcaption style="font-size:16px" >Figure 1. Agents patrol their assigned patrol regions. When
+                an incident occurs, <br> the nearest agent is assigned to attend,
+                with the aim of meeting the response time QoS requirements.</figcaption>
+        </figure>
+
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Project Overview</div>
+            <div class="pubs-text pubs-block">
+                Law enforcement agencies in dense urban environments,
+                faced with a wide range of incidents to handle and limited
+                manpower, are turning to data-driven AI to inform their policing strategy. In this project, 
+                we present a patrol scheduling system called GRAND-VISION: Ground Response Allocation
+                and Deployment - Visualization, Simulation, and Optimization. <span style="color:red">The system employs deep learning to generate incident
+                sets </span>that are used to train a patrol schedule that can accommodate varying manpower, break times, manual pre-allocations,
+                and a variety of spatio-temporal demand features. The complexity of the scenario results in a system with real world
+                applicability, which we demonstrate through simulation on
+                historical data obtained from a large urban law enforcement
+                agency.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">My work: the first neural network WCGAN with linear regression</div>
+            <div class="pubs-text pubs-block">
+                In the beginning of the project, we experimented a generative adversarial network to generate the incidents. 
+                The data we have was crime's occurence, locations, urgency, numbers of police attended and engagement time. 
+                For locations, we extracted latitude and longitude features.
+                For occurence, we extracted thirteen boolean data: eleven public holidays of Singapore, 
+                whether the day is weekend or weekday, and the day within week.
+                We further encoded the cyclical continous features of time (into cosin and sine), such as day of weeks, day of years and week of months.
+                For other features, we keep them as is. 
+                We used WCGAN to predice desired features of a crime which are latitude, longitude, 
+                crimes' occurence in minutes from midnight, urgency, engagement time and 
+                number of police attended. We conditioned on the boolean data of occurence. 
+                However, there is still one missing piece required in WCGAN which is the number of samples we want it to generate. Thus,
+                we employed Ridge regression method to predict the number of incidents. The data we used for training is the cyclical continous features.
+            </div>
+
+            <figure id="pubs-thumbnail">
+                <img src="../assets/images/workexp/gv-spf/wcgan.png" style="max-width: 80%;">
+                <figcaption style="font-size:16px">Figure 2. WCGAN with Ridge Regression.</figcaption>
+            </figure>
+            
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">My work: the second neural network STResnet with VAE</div>
+            <div class="pubs-text pubs-block">
+                We observe that the crimes are usually occur in some specific locations and frequently at a cyclic interval, yet
+                the tabular representation in the first neural network does not capture both information. Thus we decided to research a spatio-temporal model
+                that can learn these meaningful patterns. We engineered an appropriate resolution in space and time so that the image's intensities 
+                exhibits locality and stationary so that a CNN architecture could learn well.
+                <br>
+                We used STResnet[1] as a baseline architecture. 
+                Because the deployment scheduler, which performs the allocations of on-duty agents in our systems,
+                requires different scenarios of crimes, we added VAE network into STResnet to generate multiple events.
+                The final architecture is called Stochastic STResnet is shown in Figure 3.
+                
+                
+            </div>
+
+            <figure id="pubs-thumbnail">
+                <img src="../assets/images/workexp/gv-spf/stresnet.png" style="max-width: 80%;">
+                <figcaption style="font-size:16px">Figure 3. Stochastic STResnet Architecture.</figcaption>
+            </figure>
+
+            <p class="pubs-block">[1] Junbo Zhang, Yu Zheng, Dekang Qi, <a href="https://dl.acm.org/doi/10.5555/3298239.3298479" target="_blank">
+                Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction</a>, AAAI 2017
+            </p>
+            
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Publication based on the project</div>
+            <p class="pubs-block">Link to the latest version <a href="../assets/pdf/jon21.pdf">paper</a></p>
+            <p class="pubs-block">The presentation at ICAPS 2021 is given at this link 
+                <a href="https://www.youtube.com/watch?v=jsxGKxXSeNs" target="_blank">Video</a></p>
+
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+          <div class="pubs-section pubs-block">Discussion</div>
+          <p class="pubs-block pubs-text">For any questions regarding the publications, please contact me or post 
+            a comment below and I will respond shortly.
+          </p>
+          <div id="disqus_thread" class="pubs-block"></div>
+          <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://pbtran-github-io.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pubs_webpage.css">
+
+    <script src="../assets/js/simplejs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/youtube.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex: { equationNumbers: { autoNumber: "AMS" } }
+      });
+      </script>
+      
+    <link rel="icon" href="../assets/images/publications/tran18/icon.png">
+
+    <title>Stream-based ORB Feature Extractor with Dynamic Power Optimization</title>
+  </head>
+  
+  <body class="body">
+        <h1 id="pubs-heading">Stream-based ORB Feature Extractor with Dynamic Power Optimization</h1>
+
+        <h3 id="pubs-author">Tran Phong<sub>1</sub>, Thinh Hung Pham<sub>1</sub>, 
+            Siew-Kei Lam<sub>1</sub>, Meiqing Wu<sub>1</sub>, and Bhavan A. Jasani<sub>2</sub></h3>
+
+        <div class="pubs-block">
+            <p style="text-align:center; font-size:16px"><sub>1</sub>Nanyang Technological University, Singapore </p>
+            <br>
+            <p style="text-align:center; font-size:16px"><sub>2</sub>Carnegie Mellon University, United States</p>
+        </div>
+
+
+        <figure id="pubs-thumbnail">
+            <img src="../assets/images/publications/tran18/architecture.png">
+            <figcaption style="font-size:16px" >Figure 1. Feature Extraction Architecture using ORB algorithm.</figcaption>
+        </figure>
+
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Abstract</div>
+            <div class="pubs-text pubs-block">
+                The Oriented Fast and Rotated BRIEF (ORB)
+                feature extractor, which consists of key-point detection and
+                descriptor computation, is a key module in many computer
+                vision systems. Existing hardware implementations of ORB
+                feature extractor only focus on increasing performance with
+                power optimization as a post consideration. In this paper, we
+                present a stream-based ORB feature extractor that incorporates
+                mechanisms to lower the dynamic power consumption. These
+                mechanisms exploit the fact that the number of detected keypoints is typically small. The proposed solution significantly
+                lowers the switching activity of the key-point detection and
+                descriptor computation stages by early pruning of non-likely
+                key-points and gating the descriptor computation stages. Further
+                power reduction and resource minimization are achieved by
+                employing a threshold-guided bit-width optimization strategy to
+                truncate the redundant bits in the key-point detection stage.
+                Finally, we propose an approximation method to achieve rotation
+                invariance of the descriptors. FPGA implementation targeting
+                the Altera Aria V device shows that the proposed strategies lead
+                to over 25% reduction in dynamic power and lower resource
+                utilization, with only marginal loss in accuracy
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Introduction</div>
+            <div class="pubs-text pubs-block">
+                We want to implement a power-optimized and stream-based ORB feature extractor 
+                to achieve real-time performance in computer vision systems. Yet, there are two challenges:
+                <ol style=" list-style-position: inside; list-style-type: decimal;">
+                    <li>
+                        Firstly, the key-point detection algorithm is computationally intensive due to the numerous addition and multiplication operators
+                        needed for calculating the corner response. 
+                    </li>
+                    <li>
+                        Secondly, a large number of row buffers are
+                        typically used in stream processing to cache the input pixel stream, which contributes to significant dynamic power 
+                        consumption and hardware resources.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="pubs-text pubs-block">
+                We thus introduce four main contributions to solve the aformentioned challenges:
+                <ul style="list-style-type: disc; list-style-position: inside;">
+                    <li>
+                        We propose a new stream-based architecture for ORB feature extraction that utilizes an approximation angle 
+                        discretization method to acehive rotation invariance of the descriptors that avoids costly operations.
+                    </li>
+                    <li>
+                        We present strategies to lower the dynamic power by effectively inhibiting unncessary signal activities 
+                        in the key-point detection and descriptor computation pipeline.
+                    </li>
+                    <li>
+                        We introduce a bit-width optimization strategy in the key-point detection stage to lower power consumption.
+                    </li>
+                    <li>
+                        We show that the proposed strategies maintain a marginal loss of accuracy while achieving notable savings in
+                        dynamic power and resource utilization on the Altera Aria V FPGA.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="pubs-block">
+            <div class="pubs-block pubs-section">Accuracy Evaluation</div>
+            <div class="pubs-block pubs-text">
+                <span style="font-weight: bold;">First</span>, we measure the accuracy of the key-points detector in which we use repeatability criterion, which measures the robustness against
+                variety of changes in image conditions, i.e. rotation, scaling, and illumination. Here we report the difference in repeatability of 
+                <span style="font-style: italic;">Prop2-KD</span> and <span style="font-style: italic;">Prop1-KD</span> which is computed in Equation (1).
+
+                $$
+                \begin{equation}
+                    \tag{1}
+                    \Delta r = \frac{|\text{repeat}_{\text{Prop2-KD}} - \text{repeat}_{\text{Prop1-KD}}|}{\text{repeat}_{\text{Prop1-KD}}} \times 100 \%
+                \end{equation}
+                $$
+            
+            Figure 2 illustrates the difference in repeatability rate of
+            <span style="font-style: italic;">Prop2-KD</span> 
+            and <span style="font-style: italic;">Prop1-KD</span>, where the x-axis is the truncated
+                bit-width of gradient values (G = 11 to 5). The results show
+                that the repeatability difference increases with larger bit-width
+                truncation which implies higher accuracy degradation. When
+                6 bits of the gradients are truncated, the loss of accuracy
+                of the proposed architecture is marginal (less than 6%) for
+                all datasets, but the gains in terms of power and resource
+                utilization reduction are significant (as shown in the next subsection).
+            
+            <figure id="pubs-thumbnail">
+                <img src="../assets/images/publications/tran18/repeatability.png">
+                <figcaption>Figure 2. The difference in repeatability rate of <span style="font-style: italic;">Prop2-KD</span> 
+                    and <span style="font-style: italic;">Prop1-KD</span>.</figcaption>
+            </figure>
+            
+            <span style="font-weight: bold;">Second</span>, we compare the descriptor accuracy which is determined by the Hamming distance
+            of the 256-bit descriptor vectors of each implementation(<span style="font-style: italic;">Existing</span> 
+            and <span style="font-style: italic;">Prop2</span>).
+
+            <figure id="pubs-thumbnail">
+                <img src="../assets/images/publications/tran18/hamming.png">
+                <figcaption>Figure 3. Hamming distances with respect to the implementation using double precision.</figcaption>
+            </figure>
+
+            Figure 3 shows the average
+            Hamming distance of <span style="font-style: italic;">Existing</span> 
+            and <span style="font-style: italic;">Prop2</span>. It is evident that our
+            design results in fewer error bits than <span style="font-style: italic;">Existing</span>. Particularly, 
+            the proposed ORB feature descriptor achieves about 50% reduced
+            Hamming distance compared to <span style="font-style: italic;">Existing</span> for all four datasets.
+            One of the main reasons that our design resulted in higher
+            accuracy is the rounding scheme that we have employed in the
+            Angle unit for approximating the nearest index of the \(\cos \theta \) and
+            \(\sin \theta \) LUT, and for determining the point-pairs for binary test.
+            Unlike <span style="font-style: italic;">Existing</span>, we employ rounding to the nearest integer,
+            which produces more accurate results.
+        </div>
+        </div>
+
+
+        <div class="divider"></div>
+
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Paper</div>
+            <p class="pubs-block pubs-text">Link to the latest version <a class="pubs-text" href="../assets/pdf/tran18.pdf">paper</a></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="pubs-block">
+            <div class="pubs-section pubs-block">Acknowledgement</div>
+            <p class="pubs-block pubs-text">This research project is partially funded by the National
+                Research Foundation Singapore under its Campus for Research Excellence and Technological Enterprise (CREATE)
+                programme</p>
+        </div>
+
+        <div class="divider"></div>
+        <div class="pubs-block">
+          <div class="pubs-section pubs-block">Discussion</div>
+          <p class="pubs-block pubs-text">For any questions regarding the publications, please contact me or post 
+            a comment below and I will respond shortly.
+          </p>
+          <div id="disqus_thread" class="pubs-block"></div>
+          <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://pbtran-github-io.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        
+  </body>
+</html>
