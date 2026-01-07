@@ -288,7 +288,7 @@
             <div class="research-summary">
                 <div style="overflow:hidden">
                     <div style="max-width: 50%; float:left;">
-                        <span class="pub-name" style="color:black;">2D Bin-Packing Optimizer for PV Module Layouts</span>
+                        <span class="pub-name" style="color:black;">PV Module Layout Optimization & Rooftop Detection System</span>
                     </div>
                     <div style="max-width: 50%; float:right;">
                         VJ Technologies, 2025
@@ -296,7 +296,23 @@
                 </div>
 
                 <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Designed a 2D bin-packing optimizer for PV module layouts on single- to four-slope roofs, honoring code setbacks, obstructions, azimuth/tilt, and spacing constraints to maximize energy yield and roof utilization. Reconstructed roof geometry from plan dimensions (CAD/PDF) and built a computer-vision pipeline to detect, reconstruct, and vectorize rooftop facets from Google Maps/aerial imagery using YOLOv11x-seg, illumination-invariant preprocessing, adaptive thresholding, K-means, RANSAC, and polygonization.
+                    Designed a 2D bin-packing optimizer for PV module layouts on single- to four-slope roofs, honoring code setbacks, obstructions, azimuth/tilt, and spacing constraints to maximize energy yield and roof utilization. Reconstructed roof geometry from plan dimensions (CAD/PDF) using Gemini Vision API to extract building dimensions and roof gable overhang orientation from Japanese architectural drawings, with multi-page PDF processing. Built a computer-vision pipeline to detect and vectorize rooftop facets from aerial imagery: YOLO11x-seg for roof polygon detection, ridge line detection using Hough Transform, and roof type classification (1-4 slopes) with DBSCAN clustering and RDP simplification. Technologies: Python, OpenCV, NumPy, Gemini Vision API, PDF2Image; Models: YOLO11x-seg; Methods: Dynamic Programming, Knapsack algorithm, CLAHE preprocessing, adaptive thresholding, DBSCAN, RDP simplification, Hough Transform, multi-threaded processing.
+                </p>
+            </div>
+        </div>
+        <div class="research-proj block">
+            <div class="research-summary">
+                <div style="overflow:hidden">
+                    <div style="max-width: 50%; float:left;">
+                        <span class="pub-name" style="color:black;">Automated Document Processing System for Japanese Real Estate Using Vision-Language Models</span>
+                    </div>
+                    <div style="max-width: 50%; float:right;">
+                        VJ Technologies, 2025
+                    </div>
+                </div>
+
+                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
+                    Developed an automated document processing system for Japanese real estate using Vision-Language Models (QwenVL) to extract and populate data from PDFs into Excel templates. Implemented end-to-end pipeline for document digitization: detecting empty cells in templates, extracting structured data from PDF documents, mapping extracted information to predefined schemas, and generating formatted output files. Built REST API with FastAPI, asynchronous processing, callback support, and error handling. Integrated LLM for table detection, OCR, and form filling with prompt engineering. Results: automated document processing workflow, reduced processing time from manual to automated, high accuracy with Japanese text and complex tables. Technologies: Python, FastAPI, QwenVL, Vision-Language Models, OCR, PDF Processing, Excel Automation, RESTful APIs, Docker, Pydantic.
                 </p>
             </div>
         </div>
