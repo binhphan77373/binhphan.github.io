@@ -110,10 +110,17 @@
 
                 <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
                     <strong>PV Module Layout Optimization & Rooftop Detection System:</strong><br>
-                    • Designed a 2D bin-packing optimizer for PV module layouts on single- to four-slope roofs, considering code setbacks, obstructions, azimuth/tilt, and spacing constraints to maximize energy yield and roof utilization.<br>
-                    • Reconstructed roof geometry from plan dimensions (CAD/PDF) and auto-placed panels.<br>
-                    • Built a computer-vision pipeline to detect, reconstruct, and vectorize rooftop facets from Google Maps/aerial imagery (ridge lines, facets, slopes).<br>
-                    • <strong>Technologies/Models/Methods Used:</strong> Python, OpenCV, NumPy, Shapely, scikit-image, PyTorch; models: YOLOv11x-seg; methods: illumination-invariant preprocessing, adaptive thresholding, K-means, RANSAC, polygonization/simplification.
+                    • Designed a 2D bin-packing optimizer for PV module layouts on single- to four-slope roofs, honoring code setbacks, obstructions, azimuth/tilt, and spacing constraints to maximize energy yield and roof utilization.<br>
+                    • Reconstructed roof geometry from plan dimensions (CAD/PDF) using Gemini Vision API to extract building dimensions and roof gable overhang orientation from Japanese architectural drawings, with multi-page PDF processing.<br>
+                    • Built a computer-vision pipeline to detect and vectorize rooftop facets from aerial imagery: YOLO11x-seg for roof polygon detection, ridge line detection using Hough Transform, and roof type classification (1-4 slopes) with DBSCAN clustering and RDP simplification.<br>
+                    • <strong>Tech:</strong> Python, OpenCV, NumPy, Gemini Vision API, PDF2Image; <strong>Models:</strong> YOLO11x-seg; <strong>Methods:</strong> Dynamic Programming, Knapsack algorithm, CLAHE preprocessing, adaptive thresholding, DBSCAN, RDP simplification, Hough Transform, multi-threaded processing.<br><br>
+                    <strong>Automated Document Processing System for Japanese Real Estate Using Vision-Language Models:</strong><br>
+                    • Developed an automated document processing system for Japanese real estate using Vision-Language Models (QwenVL) to extract and populate data from PDFs into Excel templates.<br>
+                    • Implemented end-to-end pipeline for document digitization: detecting empty cells in templates, extracting structured data from PDF documents, mapping extracted information to predefined schemas, and generating formatted output files.<br>
+                    • Built REST API with FastAPI, asynchronous processing, callback support, and error handling.<br>
+                    • Integrated LLM for table detection, OCR, and form filling with prompt engineering.<br>
+                    • <strong>Results:</strong> automated document processing workflow, reduced processing time from manual to automated, high accuracy with Japanese text and complex tables.<br>
+                    • <strong>Technologies:</strong> Python, FastAPI, QwenVL, Vision-Language Models, OCR, PDF Processing, Excel Automation, RESTful APIs, Docker, Pydantic.
                 </p>
             </div>
             
