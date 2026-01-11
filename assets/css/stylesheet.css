@@ -66,16 +66,18 @@
 a {
     color: #1772d0;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
   
-a:focus, a:hover {
+a:hover {
     color: #f09228;
     text-decoration: none;
 }
   
-a.pub-name:focus, a.pub-name:hover {
+a.pub-name:hover {
   color: #f09228;
   text-decoration: none;
+  transform: translateX(2px);
 }
   
 body,
@@ -85,15 +87,15 @@ body,
   p,
   a {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 15px;
+    line-height: 1.7;
 }
   
 
 strong {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 700;
 }
   
   /*
@@ -136,20 +138,26 @@ strong {
   */
 
   /* general style for main page */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
-    padding: 2.5% 5% 2.5% 5%;
+    padding: 50px 60px;
   }
 
   .name {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   .block {
-    padding: 12px;
+    padding: 18px;
     text-align: justify;
   }
 
@@ -157,9 +165,28 @@ strong {
     overflow:hidden;
 }
 
+.introduction img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.introduction img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
 .navigation {
     font-size: 20px;
     display: block;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    padding: 15px 0;
+    margin: -50px -60px 0 -60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .navigation > ul {
@@ -170,21 +197,57 @@ strong {
 
 .navigation > ul > li {
     display: inline;
-    font-size: 20px;
-    padding-right: 5%;
+    font-size: 18px;
+    padding-right: 8%;
+}
+
+.navigation > ul > li > a {
+    padding: 10px 14px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navigation > ul > li > a:hover {
+    color: #f09228;
+    border-bottom: 2px solid #f09228;
+}
+
+.navigation > ul > li > a.active {
+    color: #1772d0;
+    border-bottom: 2px solid #1772d0;
+    font-weight: 600;
 }
 
 .divider {
     width: 100%;
-    border-bottom: 1px solid rgb(240, 232, 232);
+    height: 1px;
+    background: linear-gradient(to right, rgba(23, 114, 208, 0.1), rgba(23, 114, 208, 0.3), rgba(23, 114, 208, 0.1));
+    margin: 45px 0;
+    border: none;
 }
 
 .heading {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-top: 10px;
+    color: #1772d0;
 }
 
 .research-proj {
   overflow: hidden;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.research-proj:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .research-proj .research-thumbnail {
@@ -204,8 +267,13 @@ strong {
   color:rgb(22, 91, 170);
   font-size: 14px;
   padding: 0px 0px 5px 0px;
-  display: block;
+  display: inline-block;
   font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.research-proj .pub-name:hover {
+  color: #f09228;
 }
 
 .research-proj .pub-author {
@@ -221,6 +289,11 @@ strong {
 
 .research-proj .pub-info > a {
   padding-right: 10px;
+}
+
+.research-proj .pub-intro {
+  line-height: 1.8;
+  color: #333;
 }
 
 .pubs-text {
@@ -275,9 +348,168 @@ ul li a {
 }
 
 ul li {
-  font-size: 14px; /* Set your desired normal font size */
-  line-height: 1.5; /* Improves readability */
+  font-size: 15px; /* Set your desired normal font size */
+  line-height: 1.7; /* Improves readability */
 }
+
+/* Professional focus states for accessibility */
+*:focus {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+}
+
+a:focus {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+}
+
+/* Print-friendly styles */
+@media print {
+  .navigation {
+    position: static;
+    box-shadow: none;
+  }
+  
+  .research-proj {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .introduction img:hover,
+  .research-proj:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Responsive Design */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 40px 40px;
+  }
+  
+  .navigation {
+    margin: -40px -40px 0 -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .name {
+    font-size: 34px;
+  }
+  
+  .heading {
+    font-size: 26px;
+  }
+}
+
+/* Mobile (< 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 25px 20px;
+  }
+  
+  .navigation {
+    margin: -25px -20px 0 -20px;
+    padding: 12px 20px;
+  }
+  
+  .navigation > ul > li {
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+  }
+  
+  .navigation > ul > li > a {
+    display: block;
+    padding: 8px;
+  }
+  
+  .name {
+    font-size: 28px;
+  }
+  
+  .heading {
+    font-size: 24px;
+  }
+  
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
+    font-size: 14px;
+  }
+  
+  .block {
+    padding: 12px;
+  }
+  
+  .divider {
+    margin: 30px 0;
+  }
+  
+  .introduction {
+    flex-direction: column !important;
+  }
+  
+  .introduction > div {
+    width: 100% !important;
+    float: none !important;
+    text-align: center;
+  }
+  
+  .introduction img {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto 20px auto;
+  }
+  
+  .research-proj {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .research-proj .research-thumbnail {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .research-proj .research-summary {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 20px 15px;
+  }
+  
+  .navigation {
+    margin: -20px -15px 0 -15px;
+    padding: 10px 15px;
+  }
+  
+  .name {
+    font-size: 24px;
+  }
+  
+  .heading {
+    font-size: 22px;
+  }
+  
+  .research-proj {
+    padding: 12px;
+  }
+}
+
  /****************/
 
  
