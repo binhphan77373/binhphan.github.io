@@ -1,12 +1,10 @@
-# binhphan.github.io
-
 Trang web cá nhân của Phan Binh - Research Engineer chuyên về AI, Computer Vision và Embedded Systems.
 
 ## 🌐 Xem trang web
 
-Truy cập: [https://binhphan.github.io](https://binhphan.github.io)
+Truy cập: [https://binhphan77373.github.io/binhphan.github.io/](https://binhphan.github.io)
 
-## 📋 Giới thiệu
+## Giới thiệu
 
 Đây là trang web cá nhân được host trên GitHub Pages, giới thiệu về:
 - **Nghiên cứu**: Phát triển và tối ưu hóa các mô hình deep learning đa phương thức và computer vision
@@ -14,14 +12,14 @@ Truy cập: [https://binhphan.github.io](https://binhphan.github.io)
 - **Dự án**: Các dự án về AI, Computer Vision, và Embedded Systems
 - **Tech Blog**: Chia sẻ kiến thức về Computer Vision, Deep Learning, và Embedded Systems
 
-## 🛠️ Công nghệ sử dụng
+## Công nghệ sử dụng
 
 - HTML5
 - CSS3
 - JavaScript (jQuery)
 - GitHub Pages
 
-## 📁 Cấu trúc dự án
+## Cấu trúc dự án
 
 ```
 binhphan.github.io/
@@ -38,7 +36,7 @@ binhphan.github.io/
 └── blog.html           # Trang blog chính
 ```
 
-## 🚀 Triển khai
+## Triển khai
 
 Trang web này sử dụng GitHub Pages để hosting. Để triển khai:
 
@@ -47,7 +45,7 @@ Trang web này sử dụng GitHub Pages để hosting. Để triển khai:
 3. Chọn branch `main` và folder `/ (root)`
 4. Trang web sẽ tự động được publish tại `username.github.io`
 
-## 📝 Nội dung chính
+## Nội dung chính
 
 ### Research & Expertise
 - **Computer Vision**: Object detection, image segmentation, tracking, depth estimation
@@ -74,6 +72,4 @@ Trang web này sử dụng GitHub Pages để hosting. Để triển khai:
 
 Theme được lấy cảm hứng từ [Jon Barron](https://jonbarron.info/)
 
----
-
-*Trang web này được maintain bởi Phan Binh*
+---© 2024 Phan Binh. All rights reserved.
