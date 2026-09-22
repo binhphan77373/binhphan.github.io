@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script src="./assets/js/clean-urls.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Phan Binh — Research Engineer specializing in AI, Computer Vision, Deep Learning and Embedded Systems. DUT undergraduate.">
     <meta name="author" content="Phan Binh">
@@ -27,13 +28,13 @@
     <nav class="navigation block" aria-label="Main navigation">
         <ul>
             <li>
-                <a href="index.html" style="font-size:16px" class="active"> Home</a>
+                <a href="./" style="font-size:16px" class="active"> Home</a>
             </li>
             <li>
-                <a href="index.html#projects" style="font-size:16px"> Projects</a>
+                <a href="./projects/" style="font-size:16px"> Projects</a>
             </li>
             <li>
-                <a href="blog.html" style="font-size:16px"> Tech Blog</a>
+                <a href="./blog/" style="font-size:16px"> Tech Blog</a>
             </li>
             <li class="dark-mode-toggle-li">
                 <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">🌙</button>
@@ -281,122 +282,6 @@
         </div>
     </div>
 
-    <div class="divider"></div>
-    <div class="project block animate-on-scroll" id="projects">
-        <p class="heading block" style="display: inline-block;">Projects</p>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <a href="https://drive.google.com/file/d/1UQzgzMT9CBYTIjxYRiWUfnkSKK68cS4e/view?usp=sharing" class="pub-name" style="display:inline" target="_blank">AI-powered Smart Glasses for Visually Impaired</a>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        NTU, 2025
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Integrated object detection, depth estimation, text to speech, speech to text, and vision-language models on embedded platforms (NVIDIA Jetson Orin NX, Intel NUC, Aria smart glasses) to assist visually impaired users, achieving real-time performance up to 14 FPS. The system enables real-time assistance by guiding users to locate specific objects and navigate safely by detecting and avoiding obstacles.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <span class="pub-name">PV Module Layout Optimization & Rooftop Detection System</span>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        VJ Technologies, 2025
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Designed a 2D bin-packing optimizer for PV module layouts on single- to four-slope roofs, honoring code setbacks, obstructions, azimuth/tilt, and spacing constraints to maximize energy yield and roof utilization. Reconstructed roof geometry from plan dimensions (CAD/PDF) using Gemini Vision API to extract building dimensions and roof gable overhang orientation from Japanese architectural drawings, with multi-page PDF processing. Built a computer-vision pipeline to detect and vectorize rooftop facets from aerial imagery: YOLO11x-seg for roof polygon detection, ridge line detection using Hough Transform, and roof type classification (1-4 slopes) with DBSCAN clustering and RDP simplification. Technologies: Python, OpenCV, NumPy, Gemini Vision API, PDF2Image; Models: YOLO11x-seg; Methods: Dynamic Programming, Knapsack algorithm, CLAHE preprocessing, adaptive thresholding, DBSCAN, RDP simplification, Hough Transform, multi-threaded processing.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <span class="pub-name">Automated Document Processing System for Japanese Real Estate Using Vision-Language Models</span>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        VJ Technologies, 2025
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Developed an automated document processing system for Japanese real estate using Vision-Language Models (QwenVL) to extract and populate data from PDFs into Excel templates. Implemented end-to-end pipeline for document digitization: detecting empty cells in templates, extracting structured data from PDF documents, mapping extracted information to predefined schemas, and generating formatted output files. Built REST API with FastAPI, asynchronous processing, callback support, and error handling. Integrated LLM for table detection, OCR, and form filling with prompt engineering. Results: automated document processing workflow, reduced processing time from manual to automated, high accuracy with Japanese text and complex tables. Technologies: Python, FastAPI, QwenVL, Vision-Language Models, OCR, PDF Processing, Excel Automation, RESTful APIs, Docker, Pydantic.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <span class="pub-name">YOLOv5s Optimization: Pruning, Transfer Learning & Quantization</span>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        EyeCode, 2024
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Optimized YOLOv5s model through multiple techniques: (1) Pruning by 10% reduced inference time by 5% with minor mAP drop (0.812 to 0.797); (2) Transfer Learning improved mAP from 0.695 to 0.846 on smaller datasets; (3) Quantization Aware Training reduced inference time by 9.45% while maintaining mAP at 0.819. All tests conducted on Odroid N2+ embedded platform.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <span class="pub-name">People Counting in ROI Area of Multiple CCTVs</span>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        D-soft jsc, 2024
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Developed a real-time people counting system using YOLOv8n model to detect and count individuals within user-defined ROI areas from multiple CCTV feeds. The system delivers approximately 98% accuracy, 40ms processing time per frame, and around 25 fps performance on NVIDIA GTX 1650 (4GB). Integrated OpenCV and Streamlit for robust data visualization and real-time analytical capabilities.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-74127-2_8" class="pub-name" style="display:inline" target="_blank">Enhanced Attention-based Multimodal Deep Learning for Product Categorization</a>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        DUT, 2023-2024
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Designed and implemented an attention-based multimodal deep learning model integrating image and text data with a robust fusion module to classify 16 product categories on e-commerce platforms. The model achieved 91.18% accuracy, significantly outperforming traditional multimodal and unimodal models (max 77.21%), enhancing product searchability and customer experience.
-                </p>
-            </div>
-        </div>
-        <div class="research-proj block">
-            <div class="research-summary">
-                <div style="overflow:hidden">
-                    <div style="max-width: 50%; float:left;">
-                        <span class="pub-name">NIRsViT: Modified Vision Transformer for Imbalanced NIRS Data Classification</span>
-                    </div>
-                    <div style="max-width: 50%; float:right;">
-                        DUT, 2023
-                    </div>
-                </div>
-
-                <p class="pub-intro" style="font-size:14px; padding:5px 0px 5px 0px;">
-                    Led the design and implementation of NIRsViT, a Vision Transformer-based model tailored for manure classification using near-infrared spectroscopy (NIRS) data. Introduced Focal Loss and Upsampling methods to tackle imbalanced datasets, achieving F1-Score of 93.03% and accuracy of 97.96%, outperforming existing models and establishing a new benchmark in NIRS-based manure identification.
-                </p>
-            </div>
-        </div>
-    </div>
     </main>
 
     <footer class="site-footer">
@@ -456,26 +341,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Active Nav Highlighting
-    const sections = document.querySelectorAll('[id]');
-    const navLinks = document.querySelectorAll('.navigation a');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const top = section.offsetTop - 120;
-            if (window.scrollY >= top) current = section.getAttribute('id');
-        });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (current === 'projects' && link.getAttribute('href').includes('#projects')) {
-                link.classList.add('active');
-            }
-        });
-        if (!current || current !== 'projects') {
-            const homeLink = document.querySelector('.navigation a[href="index.html"]');
-            if (homeLink) homeLink.classList.add('active');
-        }
-    });
     </script>
   </body>
 </html>

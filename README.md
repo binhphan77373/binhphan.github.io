@@ -36,15 +36,20 @@ binhphan.github.io/
 │   ├── images/         # Hình ảnh (profile, projects, publications)
 │   ├── js/             # JavaScript files
 │   └── pdf/            # PDF files (CV)
-├── blog/               # Trang blog kỹ thuật
-├── projects/           # Trang chi tiết các dự án
-├── publications/       # Trang các công bố khoa học
-├── workexp/            # Trang kinh nghiệm làm việc
+├── blog/index.html     # Trang blog: /blog/
+├── projects/index.html # Trang dự án: /projects/
 ├── index.html          # Trang chủ
-└── blog.html           # Trang blog chính
+└── blog.html           # Chuyển hướng URL blog cũ
 ```
 
 ---
+
+## URL và chạy local
+
+Chạy `python3 -m http.server 8000`, rồi mở `http://localhost:8000/`.
+Menu sử dụng URL thư mục: `/`, `/projects/`, `/blog/` (không có `.html` hoặc `#projects`).
+Các đường dẫn tương đối cũng hoạt động dưới tiền tố repository trên GitHub Pages.
+Liên kết cũ `index.html#projects` và `blog.html` tự chuyển đến trang mới khi JavaScript được bật; `blog.html` có thêm chuyển hướng HTML dự phòng.
 
 ## Triển khai
 
