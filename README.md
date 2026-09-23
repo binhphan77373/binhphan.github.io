@@ -4,7 +4,7 @@ Trang web cá nhân của Phan Binh — sinh viên đại học tại Trường 
 
 ## 🌐 Xem trang web
 
-👉 [https://binhphan77373.github.io/binhphan.github.io/](https://binhphan77373.github.io/binhphan.github.io/)
+👉 [https://binhphan.online/](https://binhphan.online/)
 
 ---
 
@@ -67,7 +67,8 @@ Trang web sử dụng GitHub Pages để hosting. Để tự triển khai:
 - **Email**: [binhphan77373@gmail.com](mailto:binhphan77373@gmail.com)
 - **LinkedIn**: [linkedin.com/in/prog1405](https://www.linkedin.com/in/prog1405/)
 - **GitHub**: [github.com/binhphan77373](https://github.com/binhphan77373)
-- **CV**: Xem trực tiếp trên trang web hoặc tại `assets/pdf/CV_Phan_Binh_2025.pdf`
+- **Google Scholar**: [scholar.google.com/citations?user=cz7kL2oAAAAJ](https://scholar.google.com/citations?user=cz7kL2oAAAAJ&hl=vi)
+- **CV**: [Xem CV](https://binhphan.online/assets/pdf/CV_Phan_Binh_2025.pdf)
 
 ---
 
